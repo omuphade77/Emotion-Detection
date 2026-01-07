@@ -1,0 +1,77 @@
+/* The Main Container */
+.studio-container {
+  display: grid;
+  /* 3 columns on laptop, 1fr means 'one fraction' of equal space */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Space between boxes */
+  max-width: 1200px; /* Keeps the grid from getting too wide on big screens */
+  margin: 0 auto; /* Centers the entire container on the page */
+  padding: 20px;
+}
+
+/* Individual Boxes */
+.box {
+  position: relative;
+  height: 350px; /* Set the height of your video boxes */
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background: rgba(0, 0, 0, 0.35);/* Black background if video fails to load */
+ 
+  
+}
+.main-bg-video{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* Responsive Rules for Mobile */
+@media (max-width: 768px) {
+  .studio-container {
+    /* Switch to 1 column on tablets and phones */
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .box {
+    height: 250px; /* Slightly shorter boxes for smaller screens */
+  }
+}
+
+/* Video Styling (Same as before) */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Text on top of video */
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* This pushes content to the bottom */
+  align-items: center; /* This keeps it centered horizontally */
+  font-family: "Arial Black", sans-serif;
+}
+.main-heading {
+  position: relative;
+  font-size: 2em;
+  margin-bottom: 10px;
+  z-index: 2;
+  text-align: center;
+  font-family: "Arial Black", sans-serif;
+  color: #333;
+}
