@@ -84,7 +84,6 @@
   cursor: pointer;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .studio-container {
     grid-template-columns: 1fr;
