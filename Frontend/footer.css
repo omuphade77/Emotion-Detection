@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+
+/* LEFT */
+.footer-left .logo {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.footer-left span {
+  font-weight: 300;
+}
+
+.footer-links li {
+  list-style: none;
+  margin: 12px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* RIGHT */
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.social-card {
+  width: 130px;
+  height: 130px;
+  border-radius: 18px;
+  border: 1px solid #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.social-card i {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.social-card span {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ZOOM EFFECT */
+.social-card.active {
+  background: white;
+  color: black;
+  transform: scale(1.15);
+}
+
+/* Footer Bottom */
+.copyright {
+  text-align: center;
+  color: #aaa;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
